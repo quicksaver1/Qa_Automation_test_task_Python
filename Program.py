@@ -13,7 +13,6 @@ def parseConfigLine(nextLine):
     valuesTable[leftValue]=rightValue
     
 argsLength=len(sys.argv)
-#print(sys.argv)
 if not argsLength == 3:
     raise Exception(f"Wrong amount of arguments: {argsLength-1!r} instead of 2")
 
@@ -29,7 +28,6 @@ textLines=[]
 for line in textFile:
     textLines.insert(0,line)
 textFile.close()
-print(valuesTable)#Debug
 for line in textLines:
     for key in valuesTable:  
         line=line.replace(key,valuesTable[key])
